@@ -1,0 +1,1046 @@
+<p style="margin-bottom: 3rem; font-size: 1.1rem; color: #9ca3af;">
+                آماده همکاری در پروژه‌های جالب مربوط به IoT، بک‌اند و هر چیز تکنولوژیک<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمدرضا عباداله - Backend Developer & IoT Lover</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #e5e7eb;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid #374151;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #d1d5db;
+            border: 2px solid #374151;
+        }
+
+        .btn-secondary:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #f9fafb;
+        }
+
+        /* About Section */
+        .about {
+            background: rgba(17, 24, 39, 0.5);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #60a5fa, #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden; /* مهم: برای کراپ کردن عکس */
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image i {
+            font-size: 4rem;
+            color: #60a5fa;
+            z-index: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* عکس رو فیت می‌کنه داخل دایره */
+            border-radius: 50%;
+            position: relative;
+            padding: 10px; /* فاصله برای حفظ حاشیه رنگی دور عکس */
+            z-index: 1;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tech-item {
+            background: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+        }
+
+        /* Experience Section */
+        .experience-item {
+            background: rgba(31, 41, 55, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+            box-shadow: 0 10px 30px rgba(96, 165, 250, 0.1);
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #f9fafb;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-name {
+            color: #60a5fa;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-duration {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-description {
+            line-height: 1.7;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: rgba(17, 24, 39, 0.5);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(31, 41, 55, 0.7);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #f9fafb;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(168, 85, 247, 0.1);
+            color: #a855f7;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #93c5fd;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(31, 41, 55, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #374151;
+            text-align: center;
+        }
+
+        .skill-category h3 {
+            color: #60a5fa;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background: rgba(75, 85, 99, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #4b5563;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: rgba(17, 24, 39, 0.5);
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: rgba(31, 41, 55, 0.7);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #d1d5db;
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(96, 165, 250, 0.2);
+        }
+
+        .contact-link i {
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f0f0f;
+            padding: 2rem 0;
+            text-align: center;
+            color: #6b7280;
+            border-top: 1px solid #374151;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .typing-animation {
+            overflow: hidden;
+            border-left: 3px solid #60a5fa;
+            white-space: nowrap;
+            animation: typing 1s steps(24, end), blink-caret 1s step-end infinite;
+            font-family: 'Fira Code', monospace;
+            color: #34d399;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #60a5fa }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* IoT and Circuit Styles */
+        .circuit-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #60a5fa 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, #a855f7 2px, transparent 2px),
+                linear-gradient(90deg, rgba(96, 165, 250, 0.1) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+            animation: circuitFlow 20s linear infinite;
+        }
+
+        @keyframes circuitFlow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(25px, 25px); }
+        }
+
+        .iot-icon {
+            display: inline-block;
+            margin: 0 5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .code-animation {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+        }
+
+        .keyword { color: #f472b6; }
+        .string { color: #34d399; }
+        .function { color: #60a5fa; }
+        .comment { color: #6b7280; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">محمدرضا عباداله</div>
+                <ul class="nav-links">
+                    <li><a href="#about">درباره من</a></li>
+                    <li><a href="#experience">تجربه کاری</a></li>
+                    <li><a href="#projects">پروژه‌ها</a></li>
+                    <li><a href="#skills">مهارت‌ها</a></li>
+                    <li><a href="#contact">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="circuit-bg"></div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>محمدرضا عباداله</h1>
+                <p class="subtitle">Backend Developer & IoT Lover</p>
+                <div class="code-animation" dir="ltr">
+                    <span class="comment"># Connect to my interactive SSH profile</span>
+                    <br><span class="keyword">$</span> <span class="function">ssh</span> <span class="string">mr-ebadollah.ir</span>
+                    <br><span class="comment"># Try it! Navigate with [F1] Me | [F2] Projects | [q] Quit</span>
+                    <br>
+                    <br><span class="comment">[  -THIS WEBSITE IS MADE BY AI AND IT IS NOT FINISHED YET-  ]</span>
+                </div>
+                <p class="description">
+                    دانشجوی مهندسی کامپیوتر ۲۰ ساله با علاقه به برنامه‌نویسی بک‌اند و دنیای IoT. 
+                    از ترکیب سخت‌افزار و نرم‌افزار برای خلق راه‌حل‌های هوشمند لذت می‌برم. همچنین عاشق بازی‌های Souls هستم! 🎮
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        مشاهده پروژه‌ها
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        تماس با من
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">درباره من</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- <i class="fas">
+                        <img src="me2.jpg" alt="">
+                    </i> -->
+                    <img src="me2.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-text">
+                    <p>
+                        سلام! من محمدرضا عباداله هستم، دانشجوی مهندسی کامپیوتر ۲۰ ساله با اشتیاق به دنیای برنامه‌نویسی و IoT. 
+                        عاشق ترکیب سخت‌افزار و نرم‌افزارم تا راه‌حل‌های هوشمند و کاربردی بسازم.
+                    </p>
+                    <p>
+                        از طراحی API های قدرتمند گرفته تا کنترل سنسورها و میکروکنترلرها، همه جای این دنیای فناوری برام جذابه. 
+                        در اوقات فراغت هم عاشق بازی‌های Souls هستم - شاید چون هم اونا و هم برنامه‌نویسی صبر و تحمل می‌خوان! 😄
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-item"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-item"><i class="fas fa-microchip"></i> Arduino</span>
+                        <span class="tech-item">Django</span>
+                        <span class="tech-item"><i class="fas fa-wifi"></i> ESP32</span>
+                        <span class="tech-item">Flask</span>
+                        <span class="tech-item"><i class="fas fa-memory"></i> Raspberry Pi</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item"><i class="fas fa-broadcast-tower"></i> MQTT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">تجربه کاری</h2>
+            
+            <div class="experience-item fade-in">
+                <h3 class="job-title">Interactive SSH Profile Creator</h3>
+                <p class="company-name">پروژه شخصی</p>
+                <p class="job-duration">۱۴۰۳ - در حال توسعه</p>
+                <p class="job-description">
+                    طراحی و پیاده‌سازی یک سیستم SSH تعاملی که به کاربران اجازه می‌دهد از طریق ترمینال با پروفایل شخصی من ارتباط برقرار کنند. 
+                    شامل ناوبری با کلیدهای Function، نمایش پروژه‌ها و اطلاعات شخصی به صورت real-time.
+                    <br><br>
+                    <strong>تست کنید:</strong> 
+                    <code id="ssh-command" 
+                        style="background: #1f2937; padding: 4px 8px; border-radius: 4px; color: #34d399; cursor: pointer;">
+                        ssh mr-ebadollah.ir
+                    </code>
+                    <span id="copy-status" style="margin-right: 8px; color: #60a5fa; display: none;">کپی شد ✅</span>
+
+                </p>
+            </div>
+
+            <div class="experience-item fade-in">
+                <h3 class="job-title">IoT Smart Home Developer</h3>
+                <p class="company-name">پروژه‌های شخصی</p>
+                <p class="job-duration">۱۴۰۲ - اکنون</p>
+                <p class="job-description">
+                    توسعه سیستم‌های خانه هوشمند با استفاده از ESP32، Arduino و Raspberry Pi. 
+                    طراحی API های REST برای کنترل دستگاه‌های IoT، پیاده‌سازی سیستم MQTT برای ارتباط real-time، 
+                    و توسعه رابط کاربری وب برای مانیتورینگ سنسورها.
+                </p>
+            </div>
+
+            <div class="experience-item fade-in">
+                <h3 class="job-title">Computer Engineering Student</h3>
+                <p class="company-name">دانشگاه</p>
+                <p class="job-duration">۱۴۰۰ - اکنون</p>
+                <p class="job-description">
+                    تحصیل در رشته مهندسی کامپیوتر با تمرکز بر سیستم‌های embedded و برنامه‌نویسی. 
+                    شرکت در پروژه‌های تیمی، یادگیری اصول طراحی الگوریتم و ساختمان داده، 
+                    و توسعه مهارت‌های برنامه‌نویسی در زبان‌های مختلف.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">پروژه‌ها</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <h3 class="project-title">Interactive SSH Profile 🖥️</h3>
+                    <p class="project-description">
+                        سیستم SSH تعاملی که امکان مشاهده پروفایل شخصی، پروژه‌ها و اطلاعات تماس را از طریق ترمینال فراهم می‌کند. 
+                        با ناوبری ساده و رابط کاربری ASCII Art طراحی شده.
+                        <br><strong>تست کنید:</strong> <code style="background: #1f2937; padding: 2px 6px; border-radius: 3px;">ssh mr-ebadollah.ir</code>
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SSH</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Shell Script</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="ssh://mr-ebadollah.ir" class="project-link">
+                            <i class="fas fa-terminal"></i>
+                            SSH Demo
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <h3 class="project-title">IoT Smart Garden 🌱</h3>
+                    <p class="project-description">
+                        سیستم هوشمند نظارت و آبیاری باغچه با استفاده از سنسورهای رطوبت، دما و نور. 
+                        کنترل از راه دور از طریق وب اپلیکیشن و اعلان‌های real-time.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Arduino</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-play"></i>
+                            Demo Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <h3 class="project-title">Home Automation API 🏠</h3>
+                    <p class="project-description">
+                        REST API جامع برای کنترل دستگاه‌های خانه هوشمند شامل چراغ‌ها، پریز‌های برقی، سنسورهای حرکت و دما. 
+                        با پشتیبانی از WebSocket برای به‌روزرسانی real-time.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-book"></i>
+                            API Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">مهارت‌ها</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fab fa-python"></i> زبان‌های برنامه‌نویسی</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C/C++</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">Bash</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-cogs"></i> فریم‌ورک‌ها و ابزارها</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Django</span>
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">FastAPI</span>
+                        <span class="skill-item">Django REST</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-microchip iot-icon"></i> IoT و سخت‌افزار</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Arduino</span>
+                        <span class="skill-item">ESP32/ESP8266</span>
+                        <span class="skill-item">Raspberry Pi</span>
+                        <span class="skill-item">MQTT</span>
+                        <span class="skill-item">Sensors</span>
+                        <span class="skill-item">Electronics</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-database"></i> پایگاه داده و شبکه</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">Redis</span>
+                        <span class="skill-item">Linux</span>
+                        <span class="skill-item">SSH</span>
+                        <span class="skill-item">Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">تماس با من</h2>
+            <p style="margin-bottom: 3rem; font-size: 1.1rem; color: #9ca3af;">
+                آماده همکاری در پروژه‌های جالب و چالش‌برانگیز هستم. بیایید در مورد ایده‌هایتان صحبت کنیم!
+            </p>
+            <div class="contact-links">
+                <a href="https://t.me/ebad84" class="contact-link">
+                    <i class="fab fa-telegram"></i>
+                    @ebad84
+                </a>
+                <a href="https://github.com/ebad84" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/ebad84" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; ۲۰۲۵ محمدرضا عباداله. تمامی حقوق محفوظ است.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                ساخته شده با <i class="fas fa-heart" style="color: #f87171;"></i> و Python
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Typing animation for code
+        const codeElement = document.querySelector('.code-animation');
+        if (codeElement) {
+            const originalText = codeElement.innerHTML;
+            codeElement.innerHTML = '';
+            
+            setTimeout(() => {
+                codeElement.innerHTML = originalText;
+                codeElement.classList.add('typing-animation');
+            }, 300);
+        }
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 15, 15, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 15, 15, 0.95)';
+            }
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero::before');
+            const rate = scrolled * -0.5;
+            
+            if (hero) {
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Click to copy the text
+        document.addEventListener("DOMContentLoaded", () => {
+            const sshCommand = document.getElementById("ssh-command");
+            const copyStatus = document.getElementById("copy-status");
+
+            sshCommand.addEventListener("click", () => {
+                navigator.clipboard.writeText(sshCommand.innerText.trim()).then(() => {
+                    copyStatus.style.display = "inline";
+                    setTimeout(() => {
+                        copyStatus.style.display = "none";
+                    }, 1500);
+                });
+            });
+        });
+
+
+        // Dynamic greeting based on time
+        const now = new Date();
+        const hour = now.getHours();
+        let greeting = 'سلام';
+        
+        if (hour < 12) {
+            greeting = 'صبح بخیر';
+        } else if (hour < 17) {
+            greeting = 'روز بخیر';
+        } else {
+            greeting = 'عصر بخیر';
+        }
+
+        // Add some interactive effects
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.05)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Skill bars animation (optional enhancement)
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.backgroundColor = 'rgba(96, 165, 250, 0.2)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.backgroundColor = 'rgba(75, 85, 99, 0.3)';
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        mobileMenuBtn.className = 'mobile-menu-btn';
+        mobileMenuBtn.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            color: #d1d5db;
+            font-size: 1.5rem;
+            cursor: pointer;
+            @media (max-width: 768px) {
+                display: block;
+            }
+        `;
+
+        // Console easter egg for developers
+        console.log(`
+        ┌─────────────────────────────────────┐
+        │                                     │
+        │       سلام توسعه‌دهنده عزیز! 👋       │
+        │                                     │
+        │   اگر کد منبع رو می‌بینی، احتمالاً      │
+        │   تو هم یک برنامه‌نویس هستی!           │
+        │                                     │
+        │   بیا باهم کار کنیم 🚀                │
+        │                                     │
+        └─────────────────────────────────────┘
+        
+        GitHub: github.com/ebad84
+        `);
+    </script>
+</body>
+</html>
