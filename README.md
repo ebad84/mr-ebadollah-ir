@@ -6,6 +6,9 @@ somehow i made it this far, TO USE AI FOR THINGS LIKE THIS
 but i will make one by my own..
 
 a simpler, pixelifyed web page, with  (88x31)[https://anlucas.neocities.org/88x31Buttons] gifs...
+
+check it out! (mr-ebadollah.ir)[https://mr-ebadollah.ir]
+
 ## todo
 
  - [] make it better on details
